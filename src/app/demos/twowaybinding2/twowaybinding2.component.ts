@@ -19,5 +19,5 @@ export class Twowaybinding2Component implements OnInit {
     console.log(this.login)
     console.log(this.mdp)
   }
-
+//test
 }
