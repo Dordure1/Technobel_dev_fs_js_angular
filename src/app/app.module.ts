@@ -21,6 +21,12 @@ import { Propertymodel5Component } from './demos/propertymodel5/propertymodel5.c
 import { Thepipes6Component } from './demos/thepipes6/thepipes6.component';
 import { Custompipes7Component } from './demos/custompipes7/custompipes7.component';
 import { PowPipe } from './demos/custompipes7/pow.pipe';
+import { Exo2pipeComponent } from './demos/exo2pipe/exo2pipe.component';
+import { ConvertisseurdatePipe } from './shared/convertisseurdate.pipe';
+import { TempfareneigthPipe } from './shared/tempfareneigth.pipe';
+import { InversionNombrePipe } from './shared/inversion-nombre.pipe';
+import { ConvertisseurdevisePipe } from './shared/convertisseurdevise.pipe';
+import { ConvertisseurnombreenlettrePipe } from './shared/convertisseurnombreenlettre.pipe';
 
 M.AutoInit()
 
@@ -40,6 +46,12 @@ M.AutoInit()
     Thepipes6Component,
     Custompipes7Component,
     PowPipe,
+    Exo2pipeComponent,
+    ConvertisseurdatePipe,
+    TempfareneigthPipe,
+    InversionNombrePipe,
+    ConvertisseurdevisePipe,
+    ConvertisseurnombreenlettrePipe,
     
   ],
   imports: [
