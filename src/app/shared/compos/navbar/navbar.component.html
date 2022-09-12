@@ -3,8 +3,7 @@
     <a id="logo-container" class="brand-logo">Logo</a>
     <ul class="right hide-on-med-and-down">
       <li><a routerLink="">Home</a></li>
-      <li><a routerLink="exos/calculette">Exos 1 : La calculette</a></li>
-      <li><a routerLink="demos/exo2pipe">Exo2 les pipes</a>  </li>
+      <li><a style="width:250px;" class="dropdown-trigger" data-target="demosListExo">&nbsp;&nbsp;&nbsp;Exos&nbsp;&nbsp;&nbsp;<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><a style="width:250px;" class="dropdown-trigger" data-target="demosList1">&nbsp;&nbsp;&nbsp;Demos&nbsp;&nbsp;&nbsp;<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
 
@@ -29,4 +28,11 @@
   <li><a routerLink="demos/pipes">Demo 6 : Le Pipes</a></li>
   <li class="divider"></li>
   <li><a routerLink="demos/cpipes">Demo 7 : Les Customs Pipes</a></li>
+</ul>
+
+<ul id="demosListExo" class="dropdown-content">
+  <li><a routerLink="exos/calculette">Exos 1 : La calculette</a></li>
+  <li class="divider"></li>
+  <li><a routerLink="demos/exo2pipe">Exo2 les pipes</a></li>
+
 </ul>

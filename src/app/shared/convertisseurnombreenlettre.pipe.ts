@@ -10,9 +10,7 @@ export class ConvertisseurnombreenlettrePipe implements PipeTransform {
     
     let nb=value
     let output = ntw.toWords(nb)
-
-    
+ 
     return output;
   }
-
 }
