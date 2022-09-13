@@ -7,13 +7,15 @@
                 <span class="card-title">the products</span>
                 <table class="tripped black-text">
                     <thead>
+                        <th></th>
                         <th> Nom</th>
                         <th> description</th>
                         <th> prix HTVA</th>
                     </thead>
                     <tbody>
+                        <!-- <div class="parallax"><img src="assets/1.png" alt="Unsplashed background img 1"></div> -->
                         <tr *ngFor= "let produit of productList">
-                            <td></td>
+                            <td><img src="{{produit.imageLink}}" style="width:50px;height:50px" alt="Unsplashed background img 1"> </td>
                             <td>{{produit.name}}</td>
                             <td>{{produit.desc}}</td>
                             <td>{{produit.price}}</td>
@@ -46,7 +48,7 @@
                 </table>
             </div>
         </div>
-        <p> cout TVA : {{VAT}}</p>
-        <p>total price : {{totPirce}} </p>
+        <p> cout TVA : {{VAT|number :"1.2-2"}}</p>
+        <p>total price : {{totPirce| number : "1.2-2"}} </p>
     </div>
 </div>
