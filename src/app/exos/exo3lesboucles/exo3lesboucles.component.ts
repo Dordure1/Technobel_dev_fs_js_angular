@@ -8,7 +8,7 @@ import {ToastType, displayToast} from 'src/app/shared/toast';
 export class Exo3lesbouclesComponent implements OnInit {
    totPirce : number  =0
    VAT : number = 0 
-
+//hello
   productList : { imageLink:string, name:string, desc : string, price: number} [] =
   [
     {imageLink: "assets/imgPomme.jpg" , name: "Pomme" , desc : "Pommes bio belges", price : 1.25},
