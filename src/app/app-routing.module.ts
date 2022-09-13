@@ -7,8 +7,10 @@ import { Exo2pipeComponent } from './demos/exo2pipe/exo2pipe.component';
 import { Exos1CalculetteComponent } from './demos/exos1-calculette/exos1-calculette.component';
 import { Four0four3Component } from './demos/four0four3/four0four3.component';
 import { Propertymodel5Component } from './demos/propertymodel5/propertymodel5.component';
+import { Structuraldirectives9Component } from './demos/structuraldirectives9/structuraldirectives9.component';
 import { Thepipes6Component } from './demos/thepipes6/thepipes6.component';
 import { Twowaybinding2Component } from './demos/twowaybinding2/twowaybinding2.component';
+import { Exo3lesbouclesComponent } from './exos/exo3lesboucles/exo3lesboucles.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:"demos/pipes", component : Thepipes6Component},
   {path:"demos/cpipes", component : Custompipes7Component},
   {path:"demos/exo2pipe", component: Exo2pipeComponent},
+  {path: "demos/strdirectives", component:Structuraldirectives9Component},
+  {path: "exos/exos3lesboucles", component: Exo3lesbouclesComponent},
 
 
   {path:"**", component:Four0four3Component}

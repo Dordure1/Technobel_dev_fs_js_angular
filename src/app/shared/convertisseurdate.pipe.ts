@@ -25,9 +25,6 @@ export class ConvertisseurdatePipe implements PipeTransform {
       {
         nbHeure = Math.floor(newValue/3600)
         newValue = value%3600
-
-      
-
       }
 /// calcul nb minutes
       if(newValue>=60)

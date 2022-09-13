@@ -27,6 +27,8 @@ import { TempfareneigthPipe } from './shared/tempfareneigth.pipe';
 import { InversionNombrePipe } from './shared/inversion-nombre.pipe';
 import { ConvertisseurdevisePipe } from './shared/convertisseurdevise.pipe';
 import { ConvertisseurnombreenlettrePipe } from './shared/convertisseurnombreenlettre.pipe';
+import { Structuraldirectives9Component } from './demos/structuraldirectives9/structuraldirectives9.component';
+import { Exo3lesbouclesComponent } from './exos/exo3lesboucles/exo3lesboucles.component';
 
 M.AutoInit()
 
@@ -52,6 +54,8 @@ M.AutoInit()
     InversionNombrePipe,
     ConvertisseurdevisePipe,
     ConvertisseurnombreenlettrePipe,
+    Structuraldirectives9Component,
+    Exo3lesbouclesComponent,
     
   ],
   imports: [
