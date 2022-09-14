@@ -36,6 +36,8 @@ import { HightlightDirective } from './shared/directives/highlight.directive';
 import { Exos3directivesComponent } from './exos/exos3directives/exos3directives.component';
 import { Highlightforexos3Directive } from './shared/directives/highlightforexos3.directive';
 import { Exo3onclickDirective } from './shared/directives/exo3onclick.directive';
+import { ParentComponent } from './demos/input-output11/parent/parent.component';
+import { ChildComponent } from './demos/input-output11/child/child.component';
 
 M.AutoInit()
 
@@ -70,6 +72,8 @@ M.AutoInit()
     Exos3directivesComponent,
     Highlightforexos3Directive,
     Exo3onclickDirective,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
