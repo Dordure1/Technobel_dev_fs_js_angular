@@ -29,6 +29,12 @@ import { ConvertisseurdevisePipe } from './shared/convertisseurdevise.pipe';
 import { ConvertisseurnombreenlettrePipe } from './shared/convertisseurnombreenlettre.pipe';
 import { Structuraldirectives9Component } from './demos/structuraldirectives9/structuraldirectives9.component';
 import { Exo3lesbouclesComponent } from './exos/exo3lesboucles/exo3lesboucles.component';
+import { Attributesdirectives9Component } from './demos/attributesdirectives9/attributesdirectives9.component';
+import { Attributesdirectivescustom10Component } from './demos/attributesdirectivescustom10/attributesdirectivescustom10.component';
+import { RenderDirective } from './demos/attributesdirectivescustom10/render.directive';
+import { HightlightDirective } from './shared/directives/highlight.directive';
+import { Exos3directivesComponent } from './exos/exos3directives/exos3directives.component';
+import { Highlightforexos3Directive } from './shared/directives/highlightforexos3.directive';
 
 M.AutoInit()
 
@@ -56,7 +62,12 @@ M.AutoInit()
     ConvertisseurnombreenlettrePipe,
     Structuraldirectives9Component,
     Exo3lesbouclesComponent,
-    
+    Attributesdirectives9Component,
+    Attributesdirectivescustom10Component,
+    RenderDirective,
+    HightlightDirective,
+    Exos3directivesComponent,
+    Highlightforexos3Directive,
   ],
   imports: [
     BrowserModule,

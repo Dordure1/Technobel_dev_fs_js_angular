@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { Attributesdirectives9Component } from './demos/attributesdirectives9/attributesdirectives9.component';
+import { Attributesdirectivescustom10Component } from './demos/attributesdirectivescustom10/attributesdirectivescustom10.component';
 import { Binding1Component } from './demos/binding1/binding1.component';
 import { Custompipes7Component } from './demos/custompipes7/custompipes7.component';
 import { Eventbinding4Component } from './demos/eventbinding4/eventbinding4.component';
@@ -11,22 +13,29 @@ import { Structuraldirectives9Component } from './demos/structuraldirectives9/st
 import { Thepipes6Component } from './demos/thepipes6/thepipes6.component';
 import { Twowaybinding2Component } from './demos/twowaybinding2/twowaybinding2.component';
 import { Exo3lesbouclesComponent } from './exos/exo3lesboucles/exo3lesboucles.component';
+import { Exos3directivesComponent } from './exos/exos3directives/exos3directives.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
-  {path:"demos/binding", component:Binding1Component},
-  {path:"demos/twowaybinding", component:Twowaybinding2Component},
-  {path:"demos/four0four", component : Four0four3Component},
-  {path:"demos/event", component:Eventbinding4Component},
-  {path:"exos/calculette", component : Exos1CalculetteComponent},
-  {path:"demos/propertymodel", component : Propertymodel5Component},
-  {path:"demos/pipes", component : Thepipes6Component},
-  {path:"demos/cpipes", component : Custompipes7Component},
-  {path:"demos/exo2pipe", component: Exo2pipeComponent},
-  {path: "demos/strdirectives", component:Structuraldirectives9Component},
-  {path: "exos/exos3lesboucles", component: Exo3lesbouclesComponent},
-
+  {path : "demos", children : [
+    {path:"binding", component:Binding1Component},
+    {path:"twowaybinding", component:Twowaybinding2Component},
+    {path:"four0four", component : Four0four3Component},
+    {path:"event", component:Eventbinding4Component},
+    {path:"propertymodel", component : Propertymodel5Component},
+    {path:"pipes", component : Thepipes6Component},
+    {path:"cpipes", component : Custompipes7Component},
+    {path:"exo2pipe", component: Exo2pipeComponent},
+    {path: "strdirectives", component:Structuraldirectives9Component},
+    {path: "attributedirectives", component : Attributesdirectives9Component},
+    {path: "attributescustom", component: Attributesdirectivescustom10Component}
+  ]},
+  {path: "exos", children :[
+    {path:"calculette", component : Exos1CalculetteComponent},
+    {path: "exos3lesboucles", component: Exo3lesbouclesComponent},
+    {path:"exos3lesdirectives", component : Exos3directivesComponent}
+  ]},
 
   {path:"**", component:Four0four3Component}
 ];

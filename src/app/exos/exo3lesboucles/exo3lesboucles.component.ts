@@ -8,13 +8,12 @@ import {ToastType, displayToast} from 'src/app/shared/toast';
 export class Exo3lesbouclesComponent implements OnInit {
    totPirce : number  =0
    VAT : number = 0 
-//hello
+
   productList : { imageLink:string, name:string, desc : string, price: number} [] =
   [
     {imageLink: "assets/imgPomme.jpg" , name: "Pomme" , desc : "Pommes bio belges", price : 1.25},
     {imageLink: "assets/imgBanane.jpg",name : "Banane" , desc : "banane provenant d'espagne", price : 1.25},
     {imageLink:"assets/imgKiwi.png" ,name : "Kiwi" , desc : "Kiwi 100% belges, je vous jure!", price : 1.25}
-
   ]
 
   myWallet : {name:string , quantity:number, price:number}[]=
@@ -66,9 +65,6 @@ export class Exo3lesbouclesComponent implements OnInit {
   }
 
 
-  
-
-
 removeFromChar(productName:string, productPrice:number){
 
     this.myWallet.forEach(element => 
@@ -90,8 +86,6 @@ removeFromChar(productName:string, productPrice:number){
   
     }
   
-
-
   checktotprice(){
     this.VAT =0 
     this.totPirce =0 

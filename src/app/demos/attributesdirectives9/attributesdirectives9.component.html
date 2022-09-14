@@ -1,0 +1,81 @@
+<p>dirrectives d'attributs</p>
+<p class="left-align light"></p>
+
+<div class="row">
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+            
+                <span class="card-titls">le biding d'attribut</span>
+                <p [hidden]="textVisible">hellooo </p>
+                <button class="btn" (click)="AfficheText()">Afiicher le text au clic</button>
+                <div (mouseenter) ="reactivateDisabledInput()"class="input-field">
+                    <input [disabled]="isdisabled" type="date">
+                    <label>la date du jour</label>
+                </div>
+
+                
+                <input type ="range">
+                    <p class = "range-field">
+                       <!-- le range ne marche pas ici, voir celui de loic ! mais pas tes important-->
+                        <!-- <input [{ngModel}]="currentRange" [min]="minForRange" [max]="maxForRange" type="range" >
+                        <span>{{minForRange}} to {{maxForRange}}-> curent : {{currentRange}} </span>
+                        <label>votre humeur ajd</label> -->
+                    </p>
+
+
+                <input  [value] =" first + ' ' + last" type="text">
+                <label>une bonne blage? </label>
+                   
+                
+                
+                <!-- <div class="input-field">
+                        <input id="last_name" type="text" class ="validate">
+                        <input id = "first_name" type="text" class ="validate">
+
+                    </div> -->
+            </div>
+
+        </div>
+    </div>
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title"> Directive NgClass</span>
+                <p [ngClass]="'blue-text text-darken2'">hello everybody ppfrekerfk </p>
+                <p [ngClass]="maClass">hello everybody ppfrekerfk </p>
+                <p [ngClass] = "mesClasses">hello everybody ppfrekerfk </p>
+                <p [ngClass] = "mesClasses2">hello everybody ppfrekerfk </p>
+                <p [ngClass]="getClass(country)" >hello everybody ppfrekerfk </p>
+                <button class="btn" *ngIf="country != 'BE' " (click)="setCountry('BE')">BE</button>
+                <button class="btn" *ngIf="country != 'UK' " (click)="setCountry('UK')">UK</button>
+                <button class="btn" *ngIf="country != 'Ukraine' " (click)="setCountry('Ukraine')">Ukraine</button>
+                <span>Active Country : {{country}}</span>            
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title"> Directive NgStyle exactement ma meme chose que Ng class mais pour les styles CSS direct</span>
+                <p [ngStyle]="mesPropsCss">hello everybody ppfrekerfk </p> 
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="col m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title"> Exemple marrant</span>
+                <ul class="collection">
+                    <li [ngClass]= "colorGender(user.gender)" class ="collection-item" *ngFor= "let user of userList">
+                        {{user.name}} est : {{user.gender}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
