@@ -35,6 +35,7 @@ import { RenderDirective } from './demos/attributesdirectivescustom10/render.dir
 import { HightlightDirective } from './shared/directives/highlight.directive';
 import { Exos3directivesComponent } from './exos/exos3directives/exos3directives.component';
 import { Highlightforexos3Directive } from './shared/directives/highlightforexos3.directive';
+import { Exo3onclickDirective } from './shared/directives/exo3onclick.directive';
 
 M.AutoInit()
 
@@ -68,6 +69,7 @@ M.AutoInit()
     HightlightDirective,
     Exos3directivesComponent,
     Highlightforexos3Directive,
+    Exo3onclickDirective,
   ],
   imports: [
     BrowserModule,
