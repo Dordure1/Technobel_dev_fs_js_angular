@@ -1,0 +1,29 @@
+<h4>Input Output -> ou comment faire intéragir deux composants</h4>
+<p class="left-align light"></p>
+
+<div class="row">
+    <div class="col m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content" style="text-align: left;">
+                <span class="card-title">exercice input_output</span>
+                <input id="input" type ="text" class="input-field col s12" placeholder="name" [(ngModel)] ="nameValue">
+                <ul class="collection ">
+                <ng-container *ngFor="let person of listPerson">
+                    <li *ngIf="person.first_name == nameValue">
+                        <app-childexo4
+                        [id_person]="person.id"
+                        [firstName_person]="person.first_name"
+                        [lastName_person]="person.last_name"
+                        [email_person]="person.email"
+                        [gender_person]="person.gender"
+                        (childDelete)="deleteChild($event)"
+                        (childUpdate)="updateChild($event)"
+                        >
+                    </app-childexo4>
+                    </li>
+                </ng-container>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

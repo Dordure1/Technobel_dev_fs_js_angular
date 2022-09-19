@@ -31,7 +31,6 @@ export class ChildComponent implements OnInit {
     this.triggerInputName = !this.triggerInputName
   }
 
-
   saveOnParent(id_person : number){
     this.clickOnChildUpdateFirstName.emit({id : id_person, firstName : this.newFirstName})
     this.triggerInputName = !this.triggerInputName
