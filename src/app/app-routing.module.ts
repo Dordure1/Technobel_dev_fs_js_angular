@@ -8,7 +8,7 @@ import { Eventbinding4Component } from './demos/eventbinding4/eventbinding4.comp
 import { Exo2pipeComponent } from './demos/exo2pipe/exo2pipe.component';
 import { Exos1CalculetteComponent } from './demos/exos1-calculette/exos1-calculette.component';
 import { Four0four3Component } from './demos/four0four3/four0four3.component';
-import { ParentComponent } from './demos/input-output11/parent/parent.component';
+import { ParentComponent } from './demos/inputOutput/parent/parent.component';
 import { Propertymodel5Component } from './demos/propertymodel5/propertymodel5.component';
 import { Structuraldirectives9Component } from './demos/structuraldirectives9/structuraldirectives9.component';
 import { Thepipes6Component } from './demos/thepipes6/thepipes6.component';

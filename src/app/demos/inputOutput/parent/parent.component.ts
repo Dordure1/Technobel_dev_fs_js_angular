@@ -26,7 +26,6 @@ export class ParentComponent implements OnInit {
     this.listPerson[indexToUpdate].first_name = updatePerson.firstName
   }
 
-
   reverseSort(){
     this.listPerson.reverse()
   }
