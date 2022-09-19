@@ -1,9 +1,17 @@
 <li>
-    {{id_person}} - {{firstName_person}} - {{lastName_person}} - {{email_person}} -{{gender_person}}
-    <button (click)="deleteUser(id_person)" class="btn red">Delete User</button>
-    <button (click)="updateUser(firstName_person)" class="btn green"> UpdateUser</button>
-    <input type ="text" *ngIf="triggerUpdateName" class="input-field col s12" placeholder="new name" [(ngModel)] ="newUserName">
+    
+    <h5>
+        {{id_person}} - <span contentEditable="true" (input)="updateLoic(inputUser.innerText)" #inputUser>{{firstName_person}}</span> - {{lastName_person}} - {{email_person}} -{{gender_person}}
+    </h5>
+    <div style='text-align:right'>
+        <button (click)="deleteUser(id_person)" class="btn red">Delete User</button>
+        <button (click)="updateUser(firstName_person)" class="btn green"> UpdateUser</button>
+        <input type ="text" *ngIf="triggerUpdateName" class="input-field col s12" placeholder="new name" [(ngModel)]="newUserName">
+    </div>
     <br>
-    <button (click)="update(id_person)" *ngIf="triggerUpdateName"> Valider modification</button>
-    <button (click)="cancelUpdate()" *ngIf="triggerUpdateName">Cancel</button>
+
+    <button (click)="update(id_person)" *ngIf="triggerUpdateName" class="btn green"> Valider modification</button>
+    <button (click)="cancelUpdate()" *ngIf="triggerUpdateName" class="btn red">Cancel</button>
+
 </li>
+

@@ -18,7 +18,10 @@ export class Childexo4Component implements OnInit {
   @Output() childUpdate : EventEmitter<{id : number, firstName : string}> = new EventEmitter<{id : number, firstName : string}>()
 
 
-  constructor() { }
+  constructor() {
+
+    let tutu : Event = null
+  }
 
   ngOnInit(): void {
   }
@@ -40,6 +43,11 @@ export class Childexo4Component implements OnInit {
  cancelUpdate(){
   this.triggerUpdateName = !this.triggerUpdateName
  }
+
+
+ updateLoic(updateName : string){
+  console.log(updateName)
+}
 
 
 }

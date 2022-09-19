@@ -1,4 +1,3 @@
-<h4>Input Output -> ou comment faire intéragir deux composants</h4>
 <p class="left-align light"></p>
 
 <div class="row">
@@ -6,10 +5,32 @@
         <div class="card blue-grey darken-1">
             <div class="card-content" style="text-align: left;">
                 <span class="card-title">exercice input_output</span>
-                <input id="input" type ="text" class="input-field col s12" placeholder="name" [(ngModel)] ="nameValue">
+                <input id="input" type ="text" class="input-field col s12" placeholder="find a name" [(ngModel)] ="nameValue">
                 <ul class="collection ">
-                <ng-container *ngFor="let person of listPerson">
-                    <li *ngIf="person.first_name == nameValue">
+                <ng-container *ngFor="let person of listPerson |slice: 0:10">
+                    <div *ngIf="person.first_name.startsWith(nameValue)">
+                         <!-- <li *ngfor="let person10 of person">  -->
+                            <app-childexo4
+                            [id_person]="person.id"
+                            [firstName_person]="person.first_name"
+                            [lastName_person]="person.last_name"
+                            [email_person]="person.email"
+                            [gender_person]="person.gender"
+                            (childDelete)="deleteChild($event)"
+                            (childUpdate)="updateChild($event)"
+                            >
+                        </app-childexo4>
+                    <!-- </li> -->
+                </div>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                <!-- ceci fonctionn è!-->
+                    <!-- <li *ngIf="person.first_name.startsWith(nameValue)">
                         <app-childexo4
                         [id_person]="person.id"
                         [firstName_person]="person.first_name"
@@ -20,10 +41,18 @@
                         (childUpdate)="updateChild($event)"
                         >
                     </app-childexo4>
-                    </li>
+                    </li> -->
                 </ng-container>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<p *ngIf="!triggerInput" (click)="reverseTag()">{{ parag }}</p>
+
+<textarea (focusout)="reverseTag()"  *ngIf="triggerInput" [(ngModel)]="parag">
+</textarea>
+<button *ngIf="triggerInput" (click)="saveText()">Save texte</button>
