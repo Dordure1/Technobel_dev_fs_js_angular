@@ -17,6 +17,8 @@ import { Exo3lesbouclesComponent } from './exos/exo3lesboucles/exo3lesboucles.co
 import { Exos3directivesComponent } from './exos/exos3directives/exos3directives.component';
 import { HomeComponent } from './home/home.component';
 import {Parentexo4Component} from './exos/exos4inputoutput/parentexo4/parentexo4.component'
+import { DiComponent } from './demos/di/di.component';
+import { ShopviewComponent } from './exos/exo5LesServices/shopview/shopview.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -32,13 +34,15 @@ const routes: Routes = [
     {path: "strdirectives", component:Structuraldirectives9Component},
     {path: "attributedirectives", component : Attributesdirectives9Component},
     {path: "attributescustom", component: Attributesdirectivescustom10Component},
-    {path: "inputOutput" , component: ParentComponent}
+    {path: "inputOutput" , component: ParentComponent},
+    {path:"di", component:DiComponent},
   ]},
   {path: "exos", children :[
     {path:"calculette", component : Exos1CalculetteComponent},
     {path: "exos3lesboucles", component: Exo3lesbouclesComponent},
     {path:"exos3lesdirectives", component : Exos3directivesComponent},
-    {path: "exos4inputoutput", component:Parentexo4Component}
+    {path: "exos4inputoutput", component:Parentexo4Component},
+    {path:"shop", component:ShopviewComponent}
   ]},
 
   {path:"**", component:Four0four3Component}

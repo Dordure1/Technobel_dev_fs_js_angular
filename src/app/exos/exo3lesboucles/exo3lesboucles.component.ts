@@ -83,7 +83,6 @@ removeFromChar(productName:string, productPrice:number){
     }
     )
     this.checktotprice()
-  
     }
   
   checktotprice(){

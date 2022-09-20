@@ -10,6 +10,7 @@
                 <ng-container *ngFor="let person of listPerson |slice: 0:10">
                     <div *ngIf="person.first_name.startsWith(nameValue)">
                          <!-- <li *ngfor="let person10 of person">  -->
+                            <!-- pipe slice à mettre avec des variables du ts -->
                             <app-childexo4
                             [id_person]="person.id"
                             [firstName_person]="person.first_name"

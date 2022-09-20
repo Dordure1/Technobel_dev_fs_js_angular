@@ -1,0 +1,31 @@
+<div class="row">
+
+    <div class="col m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <span class="card-title">the products</span>
+                <table class="tripped black-text">
+                    <thead>
+
+                        <th> Nom</th>
+                        <th> quantity</th>
+                        <th> prix HTVA</th>
+                    </thead>
+                    <tbody>
+                        <!-- <div class="parallax"><img src="assets/1.png" alt="Unsplashed background img 1"></div> -->
+                        <tr *ngFor="let produit of myWallet">
+                            
+                            <td>{{produit.name}}</td>
+                            <td>{{produit.quantity}}</td>
+                            <td>{{produit.price}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{ myWallet | json }}

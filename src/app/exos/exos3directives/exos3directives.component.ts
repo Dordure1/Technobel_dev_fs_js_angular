@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ToastType, displayToast} from 'src/app/shared/toast';
+import { FakeloginService } from 'src/app/shared/services/fakelogin.service';
 
 @Component({
   selector: 'app-exos3directives',
@@ -21,9 +22,12 @@ export class Exos3directivesComponent implements OnInit {
 
  ]
 
- constructor() { }
+ isConnected:boolean =false
+
+ constructor(private fakeloginService : FakeloginService) { }
 
  ngOnInit(): void {
+  this.isConnected= this.fakeloginService.isConnected
  }
 
  addInChar(productName:string, productPrice:number ){

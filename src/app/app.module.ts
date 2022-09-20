@@ -40,6 +40,10 @@ import { ParentComponent } from './demos/inputOutput/parent/parent.component';
 import { ChildComponent } from './demos/inputOutput/child/child.component';
 import { Childexo4Component } from './exos/exos4inputoutput/childexo4/childexo4.component';
 import { Parentexo4Component } from './exos/exos4inputoutput/parentexo4/parentexo4.component';
+import { DiComponent } from './demos/di/di.component';
+import { ShopComponent } from './exos/exo5LesServices/shop/shop.component';
+import { PanierComponent } from './exos/exo5LesServices/panier/panier.component';
+import { ShopviewComponent } from './exos/exo5LesServices/shopview/shopview.component';
 
 M.AutoInit()
 
@@ -78,6 +82,10 @@ M.AutoInit()
     ChildComponent,
     Childexo4Component,
     Parentexo4Component,
+    DiComponent,
+    ShopComponent,
+    PanierComponent,
+    ShopviewComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<p>les injecteurs!</p>
+
+<div class="row">
+    <div class="col m4">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+         
+            <button *ngIf="!isConnected" class="btn green" (click)="login()">log in</button>
+            <button *ngIf="!isConnected" class="btn yellow" (click)="register()">register</button>
+            <button *ngIf="isConnected" class="btn red" (click)="logout()">log out</button>
+        </div>
+      </div>
+    </div>
+  </div>

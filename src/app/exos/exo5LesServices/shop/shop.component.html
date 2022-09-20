@@ -1,0 +1,29 @@
+<div class="row">
+
+    <div class="col m6">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <span class="card-title">the products</span>
+                <table class="tripped black-text">
+                    <thead>
+                        <th></th>
+                        <th> Nom</th>
+                        <th> description</th>
+                        <th> prix HTVA</th>
+                    </thead>
+                    <tbody>
+                        <!-- <div class="parallax"><img src="assets/1.png" alt="Unsplashed background img 1"></div> -->
+                        <tr *ngFor="let produit of productList">
+                            <td><img src="{{produit.imageLink}}" style="width:50px;height:50px" alt="Unsplashed background img 1"> </td>
+                            <td>{{produit.name}}</td>
+                            <td>{{produit.description}}</td>
+                            <td>{{produit.price}}</td>
+                            <td><button (click)="addInChar(produit.name, produit.price)">add</button></td>
+                            <td><button (click)="removeFromChar(produit.name,produit.price)">remove</button></td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
