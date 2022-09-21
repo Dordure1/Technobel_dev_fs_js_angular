@@ -7,7 +7,6 @@ import * as M from 'materialize-css'
 
 import { HomeComponent } from './home/home.component';
 
-
 import { Binding1Component } from './demos/binding1/binding1.component';
 import { Twowaybinding2Component } from './demos/twowaybinding2/twowaybinding2.component';
 
@@ -44,6 +43,9 @@ import { DiComponent } from './demos/di/di.component';
 import { ShopComponent } from './exos/exo5LesServices/shop/shop.component';
 import { PanierComponent } from './exos/exo5LesServices/panier/panier.component';
 import { ShopviewComponent } from './exos/exo5LesServices/shopview/shopview.component';
+import { RefreshpromisesComponent } from './demos/refreshpromises/refreshpromises.component';
+import { Asyncawait14Component } from './demos/asyncawait14/asyncawait14.component';
+import { Exo6lespromessesComponent } from './exos/exo6lespromesses/exo6lespromesses.component';
 
 M.AutoInit()
 
@@ -86,6 +88,9 @@ M.AutoInit()
     ShopComponent,
     PanierComponent,
     ShopviewComponent,
+    RefreshpromisesComponent,
+    Asyncawait14Component,
+    Exo6lespromessesComponent,
   ],
   imports: [
     BrowserModule,

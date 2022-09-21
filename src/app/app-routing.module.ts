@@ -19,6 +19,9 @@ import { HomeComponent } from './home/home.component';
 import {Parentexo4Component} from './exos/exos4inputoutput/parentexo4/parentexo4.component'
 import { DiComponent } from './demos/di/di.component';
 import { ShopviewComponent } from './exos/exo5LesServices/shopview/shopview.component';
+import { RefreshpromisesComponent } from './demos/refreshpromises/refreshpromises.component';
+import { Asyncawait14Component } from './demos/asyncawait14/asyncawait14.component';
+import { Exo6lespromessesComponent } from './exos/exo6lespromesses/exo6lespromesses.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -36,13 +39,16 @@ const routes: Routes = [
     {path: "attributescustom", component: Attributesdirectivescustom10Component},
     {path: "inputOutput" , component: ParentComponent},
     {path:"di", component:DiComponent},
+    {path:"lespromesses",component:RefreshpromisesComponent},
+    {path:"asyncAwait",component:Asyncawait14Component},
   ]},
   {path: "exos", children :[
     {path:"calculette", component : Exos1CalculetteComponent},
     {path: "exos3lesboucles", component: Exo3lesbouclesComponent},
     {path:"exos3lesdirectives", component : Exos3directivesComponent},
     {path: "exos4inputoutput", component:Parentexo4Component},
-    {path:"shop", component:ShopviewComponent}
+    {path:"shop", component:ShopviewComponent},
+    {path:"promesses", component:Exo6lespromessesComponent},
   ]},
 
   {path:"**", component:Four0four3Component}
