@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class PromiseDemo14AsyncAwaitService {
   private varTestAsync: number = 0 
+  private text : string = ""
   constructor() { }
 
   
@@ -145,5 +146,17 @@ export class PromiseDemo14AsyncAwaitService {
       })
       return Promise.allSettled([promise1, promise2, promise3])
 
+    }
+
+///async await for timeout
+
+    async transformText(text:string) 
+    {
+      await this.timeout(2000)
+      return text.toUpperCase()
+    }
+
+    timeout(time : number) {
+      return new Promise((resolve) => setTimeout(resolve, time))
     }
 }

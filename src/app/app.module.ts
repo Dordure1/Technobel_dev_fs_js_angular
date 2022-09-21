@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 import * as M from 'materialize-css'
 
 import { HomeComponent } from './home/home.component';
@@ -46,6 +47,8 @@ import { ShopviewComponent } from './exos/exo5LesServices/shopview/shopview.comp
 import { RefreshpromisesComponent } from './demos/refreshpromises/refreshpromises.component';
 import { Asyncawait14Component } from './demos/asyncawait14/asyncawait14.component';
 import { Exo6lespromessesComponent } from './exos/exo6lespromesses/exo6lespromesses.component';
+import { Httpclients15Component } from './demos/httpclients15/httpclients15.component';
+import { Exo7apipersoComponent } from './exos/exo7apiperso/exo7apiperso.component';
 
 M.AutoInit()
 
@@ -91,11 +94,14 @@ M.AutoInit()
     RefreshpromisesComponent,
     Asyncawait14Component,
     Exo6lespromessesComponent,
+    Httpclients15Component,
+    Exo7apipersoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

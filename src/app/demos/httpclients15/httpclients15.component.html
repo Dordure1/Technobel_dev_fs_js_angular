@@ -1,0 +1,43 @@
+<h4>Http Client</h4>
+<p class="left-align light">Le module permettant le contact frontend backend ou api rest ! </p>
+<p class="left-align light">Il ne faut pas oublier d'injecter le module HttpClientModule dans le app.module</p>
+
+<div class="row">
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <span class="card-title">Poke API</span>
+
+                
+                <ul class="collection left-align">
+                    <li *ngFor="let poke of pokeList" class="collection-item avatar">
+                        <img src="images/yuna.jpg" alt="" class="circle">
+                        <span class="title">{{poke.name}}</span>
+                        <p>First Line <br>
+                        Second Line
+                        </p>
+                        <button (click)="goToDetails(poke.url)" class="secondary-content btn-floating btn-large waves-effect waves-light green">
+                            <i class="material-icons">add</i>
+                        </button>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="col m8">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <span class="card-title">Details Pokemon</span>
+                <div *ngIf="this.pokeDetails.name.length > 0">
+                    <p>Nom : {{ this.pokeDetails.name }}</p>
+                    <p *ngFor="let type of this.pokeDetails.type; let i = index">Type {{i+1}} {{ type.type.name }}</p>
+                    <p *ngFor="let stat of this.pokeDetails.stat; let i = index">
+                        Stat de base : {{ stat.stat.name }} -> {{ stat.base_stat }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
