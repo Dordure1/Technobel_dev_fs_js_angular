@@ -26,6 +26,9 @@ import { Httpclients15Component } from './demos/httpclients15/httpclients15.comp
 import { Exo7apipersoComponent } from './exos/exo7apiperso/exo7apiperso.component';
 import { Guardian16Component } from './demos/guardian16/guardian16.component';
 import { LoginGuard } from './shared/guards/login.guard';
+import { Stroage17Component } from './demos/stroage17/stroage17.component';
+import { Routage18Component } from './demos/routage18/routage18.component';
+import { Routage2part19Component } from './demos/routage2part19/routage2part19.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -46,7 +49,10 @@ const routes: Routes = [
     {path:"lespromesses",component:RefreshpromisesComponent},
     {path:"asyncAwait",component:Asyncawait14Component},
     {path:"httpclient",component:Httpclients15Component},
-    {path:"gardian",canActivate:[LoginGuard],component:Guardian16Component}
+    {path:"gardian",canActivate:[LoginGuard],component:Guardian16Component},
+    {path:"storage",component:Stroage17Component},
+    {path:"routage",component:Routage18Component},
+    {path:"routage/:id",component:Routage18Component},
   ]},
   {
     path: "exos", children :[
@@ -60,12 +66,26 @@ const routes: Routes = [
       {path:"promesses", component:Exo6lespromessesComponent},
       {path:"shop", component:ShopviewComponent},
       {path:"apiperso", component:Exo7apipersoComponent},
-  ]},
-  {path:"**", component:Four0four3Component}
-];
+    ]},
+    /// Voir code de loic
+    {path:"categ", children: [
+      {path: "", data :{categ :"all"} , component:Routage2part19Component},
+      {path: ":id",component:Routage2part19Component},
+      {path: "product", children : [
+        {path:"", data:{product:"all"}, component:Routage2part19Component},
+        {path:":id", component:Routage2part19Component},
+      ]}],
+    
+  },
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
+
+
+    
+    {path:"**", component:Four0four3Component}
+  ];
+  
+  @NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
 export class AppRoutingModule { }

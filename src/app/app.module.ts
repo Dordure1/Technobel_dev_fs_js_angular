@@ -50,6 +50,9 @@ import { Exo6lespromessesComponent } from './exos/exo6lespromesses/exo6lespromes
 import { Httpclients15Component } from './demos/httpclients15/httpclients15.component';
 import { Exo7apipersoComponent } from './exos/exo7apiperso/exo7apiperso.component';
 import { Guardian16Component } from './demos/guardian16/guardian16.component';
+import { Stroage17Component } from './demos/stroage17/stroage17.component';
+import { Routage18Component } from './demos/routage18/routage18.component';
+import { Routage2part19Component } from './demos/routage2part19/routage2part19.component';
 
 M.AutoInit()
 
@@ -98,6 +101,9 @@ M.AutoInit()
     Httpclients15Component,
     Exo7apipersoComponent,
     Guardian16Component,
+    Stroage17Component,
+    Routage18Component,
+    Routage2part19Component,
   ],
   imports: [
     BrowserModule,

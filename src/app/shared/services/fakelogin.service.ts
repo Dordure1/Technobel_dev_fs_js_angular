@@ -22,6 +22,7 @@ export class FakeloginService {
     this.isConnected= false
     /// demo 16 local/session storage
     sessionStorage.setItem("isConnected", JSON.stringify(this.isConnected))
+    // sessionStorage.clear()
 
   }
 
@@ -36,7 +37,7 @@ export class FakeloginService {
     {
       this.isConnected = JSON.parse(tmpLogged)
     }
-
+    // sessionStorage.clear()
   }
 
 }
