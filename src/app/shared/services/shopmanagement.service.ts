@@ -12,6 +12,7 @@ export class ShopmanagementService {
   myWallet: {name: string, quantity :number, price : number}[] = []
 
   constructor() { }
+  
 
   addToChar(name:string,price:number){
  
