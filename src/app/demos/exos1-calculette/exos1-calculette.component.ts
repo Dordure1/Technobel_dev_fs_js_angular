@@ -19,6 +19,10 @@ export class Exos1CalculetteComponent implements OnInit {
   add()
   {
     this.res = Number(this.nb1) + Number(this.nb2)
+    /// demo local Storage 
+    localStorage.setItem("lastCalcul", JSON.stringify(this.nb1) + "+" + JSON.stringify(this.nb2) + "=" + JSON.stringify(this.res))
+    /// attention que le Local storage ne se supprime pas tout seul
+    ////
     this.nb1 = 0
     this.nb2 = 0
   }

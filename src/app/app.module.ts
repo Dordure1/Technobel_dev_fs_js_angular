@@ -49,6 +49,7 @@ import { Asyncawait14Component } from './demos/asyncawait14/asyncawait14.compone
 import { Exo6lespromessesComponent } from './exos/exo6lespromesses/exo6lespromesses.component';
 import { Httpclients15Component } from './demos/httpclients15/httpclients15.component';
 import { Exo7apipersoComponent } from './exos/exo7apiperso/exo7apiperso.component';
+import { Guardian16Component } from './demos/guardian16/guardian16.component';
 
 M.AutoInit()
 
@@ -96,6 +97,7 @@ M.AutoInit()
     Exo6lespromessesComponent,
     Httpclients15Component,
     Exo7apipersoComponent,
+    Guardian16Component,
   ],
   imports: [
     BrowserModule,

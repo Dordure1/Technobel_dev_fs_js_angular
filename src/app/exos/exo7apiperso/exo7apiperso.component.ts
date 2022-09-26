@@ -40,12 +40,9 @@ export class Exo7apipersoComponent implements OnInit {
 
       if(!this.allRubbishTable.includes(element.fields.libelledechet)){
         this.allRubbishTable.push(element.fields.libelledechet)
-      }
-        
-        
+      }  
     });
   })
-
   } 
 
   checkResult(mois:string,annee:string,region:string,dechets:string){
