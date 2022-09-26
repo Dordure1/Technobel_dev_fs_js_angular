@@ -11,7 +11,29 @@ export class Routage2part19Component implements OnInit {
 
   ngOnInit(): void {
     console.log(this.activatedRoute);
-    
   }
+  navigateCateg(){
+    this.router.navigate(["categ"])
+  }
+
+  navigateListProduct(){
+    this.router.navigate(["categ",12,"product"])
+
+  }
+
+  navigateProduct(){
+    this.router.navigate(["categ", this.activatedRoute.snapshot.params["idCateg"],"product"])
+  }
+  
+  navigateProductDetails(){
+    this.router.navigate(["categ", this.activatedRoute.snapshot.params["idCateg"],"product"], this.activatedRoute.snapshot.params["idProducts"])
+    
+    /// avec options 
+    /// gestion des options ?=& ?oder=Desc&limit=25
+    this.router.navigate(["categ", this.activatedRoute.snapshot.params["idCateg"],
+    "product", 
+    this.activatedRoute.snapshot.params["idProducts"],"details"], {queryParams:{"order":"desc", "limit":"20"}})
+  }
+
 
 }

@@ -70,15 +70,13 @@ const routes: Routes = [
     /// Voir code de loic
     {path:"categ", children: [
       {path: "", data :{categ :"all"} , component:Routage2part19Component},
-      {path: ":id",component:Routage2part19Component},
+      {path: ":idCateg",component:Routage2part19Component},
       {path: "product", children : [
         {path:"", data:{product:"all"}, component:Routage2part19Component},
-        {path:":id", component:Routage2part19Component},
+        {path:":idProduct", component:Routage2part19Component},
+        {path:":idProduct/details", component:Routage2part19Component},
       ]}],
-    
   },
-
-
 
     
     {path:"**", component:Four0four3Component}
