@@ -53,6 +53,9 @@ import { Guardian16Component } from './demos/guardian16/guardian16.component';
 import { Stroage17Component } from './demos/stroage17/stroage17.component';
 import { Routage18Component } from './demos/routage18/routage18.component';
 import { Routage2part19Component } from './demos/routage2part19/routage2part19.component';
+import { CategstoreComponent } from './myStore/categstore/categstore.component';
+import { ProductstoreComponent } from './myStore/productstore/productstore.component';
+import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
 
 M.AutoInit()
 
@@ -104,6 +107,9 @@ M.AutoInit()
     Stroage17Component,
     Routage18Component,
     Routage2part19Component,
+    CategstoreComponent,
+    ProductstoreComponent,
+    ProductdetailsstoreComponent,
   ],
   imports: [
     BrowserModule,

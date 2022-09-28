@@ -29,6 +29,9 @@ import { LoginGuard } from './shared/guards/login.guard';
 import { Stroage17Component } from './demos/stroage17/stroage17.component';
 import { Routage18Component } from './demos/routage18/routage18.component';
 import { Routage2part19Component } from './demos/routage2part19/routage2part19.component';
+import { CategstoreComponent } from './myStore/categstore/categstore.component';
+import { ProductstoreComponent } from './myStore/productstore/productstore.component';
+import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -77,6 +80,13 @@ const routes: Routes = [
         {path:":idProduct/details", component:Routage2part19Component},
       ]}],
   },
+    {path:"myStore", children:[
+      {path:"categ", component:CategstoreComponent},
+      {path : "categ/:idCateg", component : ProductstoreComponent},
+      {path:'categ/:idCateg/product/:idProduct', component:ProductdetailsstoreComponent},
+    ]},
+     
+    
 
     
     {path:"**", component:Four0four3Component}
