@@ -56,6 +56,8 @@ import { Routage2part19Component } from './demos/routage2part19/routage2part19.c
 import { CategstoreComponent } from './myStore/categstore/categstore.component';
 import { ProductstoreComponent } from './myStore/productstore/productstore.component';
 import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
+import { Lesobservables20Component } from './demos/lesobservables20/lesobservables20.component';
+import { Exo8lesobservablesComponent } from './exos/exo8lesobservables/exo8lesobservables.component';
 
 M.AutoInit()
 
@@ -110,6 +112,8 @@ M.AutoInit()
     CategstoreComponent,
     ProductstoreComponent,
     ProductdetailsstoreComponent,
+    Lesobservables20Component,
+    Exo8lesobservablesComponent,
   ],
   imports: [
     BrowserModule,

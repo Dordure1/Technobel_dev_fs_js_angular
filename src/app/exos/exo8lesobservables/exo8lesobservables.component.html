@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col m4">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Rajouter une bière</span>
+          <input type="text" [(ngModel)]="beerName">
+          <span>nom bière</span>
+          <input type="text" [(ngModel)]="beerDegree">
+          <span>degré bière</span>
+          <input type="text" [(ngModel)]="beerCateg">
+          <span>degré bière</span>
+          <br>
+          <br>
+          <button class="btn" (click)="addBeer(beerName,beerDegree, beerCateg )">Valider</button>
+        </div>
+      </div>
+    </div>
+    <div class="col m6">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <table>
+                <tr>
+                    <th>Nom</th>
+                    <th>degré</th>
+                    <th>Categ</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
+                </tr>
+                <tr *ngFor ="let b of list">
+                    <td>{{b.name}}</td>
+                    <td>{{b.degre}</td>
+                    <td>{{b.categorie}}</td>
+                    <td><button>Modifier</button></td>
+                    <td><button>Supprimer</button></td>
+                </tr>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+</div>
