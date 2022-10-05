@@ -56,6 +56,9 @@ import { Routage2part19Component } from './demos/routage2part19/routage2part19.c
 import { CategstoreComponent } from './myStore/categstore/categstore.component';
 import { ProductstoreComponent } from './myStore/productstore/productstore.component';
 import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
+import { UnComponent } from './demos/obs20/un/un.component';
+import { DeuxComponent } from './demos/obs20/deux/deux.component';
+import { TroisComponent } from './demos/obs20/trois/trois.component';
 
 M.AutoInit()
 
@@ -110,6 +113,9 @@ M.AutoInit()
     CategstoreComponent,
     ProductstoreComponent,
     ProductdetailsstoreComponent,
+    UnComponent,
+    DeuxComponent,
+    TroisComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,7 @@ import { Routage2part19Component } from './demos/routage2part19/routage2part19.c
 import { CategstoreComponent } from './myStore/categstore/categstore.component';
 import { ProductstoreComponent } from './myStore/productstore/productstore.component';
 import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
+import { UnComponent } from './demos/obs20/un/un.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -56,6 +57,7 @@ const routes: Routes = [
     {path:"storage",component:Stroage17Component},
     {path:"routage",component:Routage18Component},
     {path:"routage/:id",component:Routage18Component},
+    {path:"observables",component:UnComponent},
   ]},
   {
     path: "exos", children :[

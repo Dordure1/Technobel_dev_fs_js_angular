@@ -1,0 +1,21 @@
+<h4>Compo pour OBS 1</h4>
+<button (click)="login()" *ngIf="!isConnect" class="btn green darken-1">Login</button>
+<button (click)="logout()" *ngIf="isConnect" class="btn red darken-1">Logout</button>
+
+<div class="row">
+    <div class="col m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <app-deux></app-deux>
+            </div>
+        </div>
+    </div>
+
+    <div class="col m12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <app-trois></app-trois>
+            </div>
+        </div>
+    </div>
+</div>
