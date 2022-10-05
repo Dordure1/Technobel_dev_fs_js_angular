@@ -56,9 +56,14 @@ import { Routage2part19Component } from './demos/routage2part19/routage2part19.c
 import { CategstoreComponent } from './myStore/categstore/categstore.component';
 import { ProductstoreComponent } from './myStore/productstore/productstore.component';
 import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
+<<<<<<< HEAD
 import { UnComponent } from './demos/obs20/un/un.component';
 import { DeuxComponent } from './demos/obs20/deux/deux.component';
 import { TroisComponent } from './demos/obs20/trois/trois.component';
+=======
+import { Lesobservables20Component } from './demos/lesobservables20/lesobservables20.component';
+import { Exo8lesobservablesComponent } from './exos/exo8lesobservables/exo8lesobservables.component';
+>>>>>>> d06b5457ab74bdead949c6eccc0faa687e7e0e6e
 
 M.AutoInit()
 
@@ -113,9 +118,14 @@ M.AutoInit()
     CategstoreComponent,
     ProductstoreComponent,
     ProductdetailsstoreComponent,
+<<<<<<< HEAD
     UnComponent,
     DeuxComponent,
     TroisComponent,
+=======
+    Lesobservables20Component,
+    Exo8lesobservablesComponent,
+>>>>>>> d06b5457ab74bdead949c6eccc0faa687e7e0e6e
   ],
   imports: [
     BrowserModule,
