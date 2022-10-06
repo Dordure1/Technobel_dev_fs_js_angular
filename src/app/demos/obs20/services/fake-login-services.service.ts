@@ -22,6 +22,7 @@ export class FakeLoginServicesService {
 
     if(tmpIsConnect=="true")
     {
+      this.set_interval()
       this.isConnect = true
       return this.isConnect
       
