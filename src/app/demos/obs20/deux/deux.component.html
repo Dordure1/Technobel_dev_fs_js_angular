@@ -1,1 +1,11 @@
-<p *ngIf="isConnect">deux works!</p>
+<span class="card-title">Compo obs 2</span>
+<span class="blue btn">{{ isConnect}}</span>
+
+<ul class="collection" *ngIf="isConnect">
+    <li *ngFor="let product of listProduct" class="collection-item avatar" style="color:black">
+        <i class="material-icons circle green">insert_chart</i>
+        <span class="title">{{ product.name }}</span>
+        <p>{{ product.priceNet }}</p>
+        <a href="#!" class="secondary-content"><i class="material-icons">send</i></a>
+    </li>
+</ul>

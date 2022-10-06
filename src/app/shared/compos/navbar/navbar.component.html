@@ -1,7 +1,11 @@
 <nav class="" role="navigation">
   <div class="nav-wrapper container">
     <a id="logo-container" class="brand-logo">Logo</a>
+    <a *ngIf="isConnect" id="logo-container" class="brand-logo"><i style="font-size:40px;" class="material-icons">thumb_up</i></a>
+    <a *ngIf="!isConnect" id="logo-container" class="brand-logo"><i style="font-size:40px;" class="material-icons">thumb_down</i></a>
+    
     <ul class="right hide-on-med-and-down">
+      <li class="tab"><span>&nbsp;&nbsp;&nbsp;{{ timeConnectUser }}&nbsp;&nbsp;&nbsp;</span></li>
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="demos/di">Demo 11 : DI</a></li>
       <li><a routerLink="myStore/categ">myStore</a></li>
@@ -61,11 +65,7 @@
   <li class="divider"></li>
   <li><a routerLink="categ">Demo19 routage categ</a></li>
   <li class="divider"></li>
-<<<<<<< HEAD
   <li><a routerLink="demos/observables">Demo 20 les obeservables</a></li>
-=======
-  <li><a routerLink="demos/observables">Demo10 les observables</a></li>
->>>>>>> d06b5457ab74bdead949c6eccc0faa687e7e0e6e
 
 </ul>
 

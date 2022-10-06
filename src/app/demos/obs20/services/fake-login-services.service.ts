@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 
@@ -8,9 +9,14 @@ export class FakeLoginServicesService {
   static login() {
     throw new Error('Method not implemented.');
   }
-isConnect: boolean = false
-$isConnect : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.verifyLogged())
-  constructor() { }
+
+  isConnect: boolean = false
+  $isConnect : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.verifyLogged())
+  $interval : Subject<number> = new Subject<number>()
+  interval : any
+
+  constructor(private client : HttpClient) {}
+
   verifyLogged(){
     let tmpIsConnect = localStorage.getItem("isConnect")
 
@@ -22,7 +28,18 @@ $isConnect : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.verify
     }else{
       return false
     }
+  }
 
+  set_interval()
+  {
+      if(this.interval == undefined)
+      {
+          let i = 0
+          this.interval = setInterval(() => {
+              i ++ 
+              this.$interval.next(i)
+          }, 1000)
+      }
   }
 
   login(){

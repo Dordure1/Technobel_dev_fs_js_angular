@@ -59,7 +59,8 @@ import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/prod
 import { UnComponent } from './demos/obs20/un/un.component';
 import { DeuxComponent } from './demos/obs20/deux/deux.component';
 import { TroisComponent } from './demos/obs20/trois/trois.component';
-import{Exo8lesobservablesComponent} from './exos/exo8lesobservables/exo8lesobservables.component'
+import{Exo8lesobservablesComponent} from './exos/exo8lesobservables/exo8lesobservables.component';
+import { QuatreComponent } from './demos/obs20/quatre/quatre.component'
 M.AutoInit()
 
 
@@ -117,6 +118,7 @@ M.AutoInit()
     DeuxComponent,
     TroisComponent,
     Exo8lesobservablesComponent,
+    QuatreComponent,
   ],
   imports: [
     BrowserModule,
