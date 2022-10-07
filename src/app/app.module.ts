@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'
 import * as M from 'materialize-css'
 
@@ -60,7 +60,8 @@ import { UnComponent } from './demos/obs20/un/un.component';
 import { DeuxComponent } from './demos/obs20/deux/deux.component';
 import { TroisComponent } from './demos/obs20/trois/trois.component';
 import{Exo8lesobservablesComponent} from './exos/exo8lesobservables/exo8lesobservables.component';
-import { QuatreComponent } from './demos/obs20/quatre/quatre.component'
+import { QuatreComponent } from './demos/obs20/quatre/quatre.component';
+import { Reactiveform21Component } from './demos/reactiveform21/reactiveform21.component'
 M.AutoInit()
 
 
@@ -119,12 +120,14 @@ M.AutoInit()
     TroisComponent,
     Exo8lesobservablesComponent,
     QuatreComponent,
+    Reactiveform21Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

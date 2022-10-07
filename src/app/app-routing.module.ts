@@ -34,6 +34,7 @@ import { ProductstoreComponent } from './myStore/productstore/productstore.compo
 import { ProductdetailsstoreComponent } from './myStore/productdetailsstore/productdetailsstore.component';
 import { UnComponent } from './demos/obs20/un/un.component';
 import { Exo8lesobservablesComponent } from './exos/exo8lesobservables/exo8lesobservables.component';
+import { Reactiveform21Component } from './demos/reactiveform21/reactiveform21.component';
 
 const routes: Routes = [
   {path:"", component :HomeComponent},
@@ -59,6 +60,7 @@ const routes: Routes = [
     {path:"routage",component:Routage18Component},
     {path:"routage/:id",component:Routage18Component},
     {path:"observables",component:UnComponent},
+    {path:"reactiveForms",component:Reactiveform21Component},
   ]},
   {
     path: "exos", children :[

@@ -1,0 +1,84 @@
+<h1>Demo 21: Formulaires Réactifs</h1>
+
+<div class="row">
+    <div class="col s12">
+        <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">Card Title</span>
+                <form [formGroup]="myForm">
+                    Nom:
+                    <label for="name" *ngIf="myForm.controls['name'].pristine">Pristine</label>&nbsp;|&nbsp;
+                    <label for="name" *ngIf="myForm.controls['name'].touched">Touched</label>&nbsp;|&nbsp;
+                    <label for="name" *ngIf="myForm.controls['name'].valid">Valid</label>
+                    <input id="name" class="teal lighten-5" type="text" formControlName="name">
+                    <br /><br />
+                    Email:
+                    <label for="email" *ngIf="myForm.controls['email'].pristine">Pristine</label>&nbsp;|&nbsp;
+                    <label for="email" *ngIf="myForm.controls['email'].touched">Touched</label>&nbsp;|&nbsp;
+                    <label for="email" *ngIf="myForm.controls['email'].valid">Valid</label>
+                    <input id="email" class="teal lighten-5" type="text" formControlName="email">
+                    <br /><br />
+                    Mot de passe:
+                    <label for="password" *ngIf="myForm.controls['password'].pristine">Pristine</label>&nbsp;|&nbsp;
+                    <label for="password" *ngIf="myForm.controls['password'].touched">Touched</label>&nbsp;|&nbsp;
+                    <label for="password" *ngIf="myForm.controls['password'].valid">Valid</label>
+                    <input id="password" class="teal lighten-5" type="text" formControlName="password">
+                    <br /><br />
+                    Confirmer Mot de passe:
+                    <label for="confirmPwd" *ngIf="myForm.controls['confirmPwd'].pristine">Pristine</label>&nbsp;|&nbsp;
+                    <label for="confirmPwd" *ngIf="myForm.controls['confirmPwd'].touched">Touched</label>&nbsp;|&nbsp;
+                    <label for="confirmPwd" *ngIf="myForm.controls['confirmPwd'].valid">Valid</label>
+                    <input id="confirmPwd" class="teal lighten-5" type="text" formControlName="confirmPwd">
+                    <br /><br />
+                    <br /><br />
+                    <button 
+                        [disabled]="!myForm.valid"
+                        class="btn teal" 
+                        (click)="sendForm()"
+                    >
+                        Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <button class="btn teal" (click)="log()">Form Console Log</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card-panel cyan darken-1 white-text z-depth-2">
+        <h5>Info</h5>
+        <p>Documentation Angular sur les<a href="https://angular.io/guide/reactive-forms" target="_blank">Reactive Forms</a>. Mais comme toute doc Angular, c'est de la merde et il ne faut pas suivre leurs exemples...</p>
+        <p>2 types de formulaires sur Angular:</p>
+        <ul>
+            <li >•&nbsp;&nbsp;&nbsp;les inputs normaux, avec le 2-way binding...</li>
+            <li>•&nbsp;&nbsp;&nbsp;Reactive Forms: on n'a plus ce concept de 2 way binding. On utilise à la place des validateurs.</li>
+        </ul>
+        <p class="orange lighten-4 orange-text text-accent-3" style="padding: 3px">
+            <b>!!! Besoin d'ajouter module 'ReactiveFormsModule' dans les imports de app.module</b>
+        </p>
+        FormBuilder est une Factory de formulaire
+
+        FormGroup contient des FormControls, FormArray est une dérivation de FormControls, mais au lieu que le formulaire soit sous forme d'objet en mémoire, il sera sous forme de tableau
+
+
+        touched = le groupe ou le composant a été focus au moins une fois. (utile pour validateurs), pour ne pas afficher des champs rouges alors que l'utilisateur n'est meme pas encore venu dedans
+            => !! du coup, il y a une diff majeuyre entre un Group qui est touched et un champ qui est touched. Ce n'est pas parce qu'un groupe est touched que tous ses champs doivent passer au rouge.
+
+            => Le touched sur le group sert pour les stats, est-ce que l'utilisateur a cherché à rentrerdans le formulaire? Mais ne sert pas forcément aux validations.
+
+        pristine = FALSE : touched + rempli. Si seulement touched, l'input reste pristine.
+
+
+        !!! notre bouton 'submit' n'a pas besoin d'etre de type 'submit', car ça ne sert à rien. TOut est déjà dans le FormGroup.
+
+        FormControl errors: !!! n'affiche qu'une erreur à la fois. 
+        Ex champ nom:
+        - si on rentre dedans et qu'on en sort tout de suite, on aurra une erreur 'required' au nibeau du formulaire.
+        - si j'écris qu'il seule lettre dedans, l'erreur required n'est plus là, mais maintenant on a l'erreur minlength.
+
+
+
+    </div>
+</div>
